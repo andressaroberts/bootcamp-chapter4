@@ -1,0 +1,19 @@
+chance = pra usar dados fakes
+npx cypress run - roda em headless
+run --browser chrome / definir o browser que quero correr meus testes
+
+relatorios:
+- allure
+- mochaawesome
+
+quais os testes que mais falham?
+historico de quantidade ok e nok
+historico de execuções
+duração das suites de testes
+
+cypress-multi-reporters / permite ter diferentes configurações
+mochawesome-report-generator / gera relatorio html baseado no arquivo mesclado (das varias execucoes)
+
+/mescla e em qual arquivo vai ser mesclado
+"report:merge": "mochawesome-merge > index.json",
+"report:mocha": "marge index.json"
