@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-17T00:00:55.446Z",
+    "end": "2021-11-17T00:00:57.939Z",
+    "duration": 2493,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "354042d6-647f-4210-94b2-19125aeac497",
+      "title": "",
+      "fullFile": "cypress/integration/list.spec.js",
+      "file": "cypress/integration/list.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ce77c96-5692-480b-9dd5-b7f702a0730c",
+          "title": "Listing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "When there are no entries then the list must be empty",
+              "fullTitle": "Listing When there are no entries then the list must be empty",
+              "timedOut": null,
+              "duration": 610,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('list-without-items').then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n});\ncy.visit('https://form-agilizei.netlify.app/listagem.html');\ncy.get('table tbody tr').should('have.length', 0);",
+              "err": {},
+              "uuid": "036838ea-16be-4cdb-b25b-a22e32fdb832",
+              "parentUUID": "2ce77c96-5692-480b-9dd5-b7f702a0730c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When there are entries then the list should show the records",
+              "fullTitle": "Listing When there are entries then the list should show the records",
+              "timedOut": null,
+              "duration": 249,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('list-with-items').then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n});\ncy.visit('https://form-agilizei.netlify.app/listagem.html');\ncy.get('table tbody tr').should('have.length', 1);",
+              "err": {},
+              "uuid": "3493e596-0dcc-47d2-b7ce-39f87f8689c9",
+              "parentUUID": "2ce77c96-5692-480b-9dd5-b7f702a0730c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "036838ea-16be-4cdb-b25b-a22e32fdb832",
+            "3493e596-0dcc-47d2-b7ce-39f87f8689c9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 859,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
